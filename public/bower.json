@@ -1,0 +1,26 @@
+{
+  "name": "public",
+  "version": "0.0.0",
+  "authors": [
+    "Catherine <catgsmith@hotmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.3.0",
+    "angular-animate": "~1.4.6",
+    "angular-bootstrap": "~0.13.4",
+    "angular-multi-step-form": "~1.2.0",
+    "angular-route": "~1.4.6",
+    "bootstrap": "~3.3.5"
+  },
+  "devDependencies": {
+    "angular-multi-step-form": "~1.2.0"
+  }
+}

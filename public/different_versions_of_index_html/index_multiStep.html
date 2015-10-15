@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/darkly/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- JS -->
+    <!-- load angular, nganimate, and ui-router -->
+    <script src= "lib/angular/angular.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-animate.js"></script>
+	<script src= "lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+	<script src= "lib/angular-multi-step-form/dist/angular-multi-step-form.js"></script>
+	<script src= "lib/jquery/dist/jquery.min.js"></script>
+    <script src="app/domain/MultiStepController.js"></script>
+    
+</head>
+<body ng-app="formApp">
+	<div ng-controller="formController">
+		<!-- views will be injected here -->
+		<div class="container">
+			<multi-step-container steps="steps" class="sliding-steps simple-prev-next"
+				on-cancel="$dismiss()" on-finish="$close()">
+				<header class="text-center">
+					<strong ng-bind-template="{{$getActiveIndex()}} / {{$getSteps().length}}"></strong>
+				</header>
+
+				<main step-container></main>
+				<footer class="text-right">
+						<button class="btn btn-danger" ng-click="$cancel()">Cancel</button>
+
+						<button class="btn btn-success" ng-click="$finish()" ng-if="$isLast()">Finish</button>
+				</footer>
+			</multi-step-container>
+		
+			<div class="row">
+				<div class="col-sm-8 col-sm-offset-2">
+				<div class="jumbotron text-muted text-center">
+					<p>testing by <a href="http://scotch.io" target="_blank">{{name}}</a></p>
+					<p><a href="http://blog.reactandbethankful.com/angular-multi-step-form/#/using-forms">Create a Multi-Step Form</a></p>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

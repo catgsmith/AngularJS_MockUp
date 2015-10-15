@@ -1,0 +1,26 @@
+<h3 class="modal-title">Vehicle Job</h3>
+
+<table class="table jobDetails-table">
+	<tr>
+		<td>Fleet No.</td>
+		<td  class="item-strong">{{vehicleJob.fleetNo}}</td>
+		<td>Make/Model</td>
+		<td  class="item-strong">{{vehicleJob.make}} {{vehicleJob.model}}</td>
+		<td>Service Due:</td>
+		<td  class="item-strong">{{vehicleJob.serviceDue | date }}</td>            
+	</tr>
+	<tr>    
+		<td>Registration</td>
+		<td  class="item-strong">{{vehicleJob.reg}}</td>
+		<td>Driver</td>
+		<td  class="item-strong">{{vehicleJob.driver}}</td>
+		<td>Inspection Date</td>
+		<td  class="item-strong">{{vehicleJob.date | date }}</td>           
+	</tr>
+	<tr>
+		<td></td><td></td>
+		<td></td><td></td>
+		<td>Status</td>
+		<td  class="item-strong">{{vehicleJob.status}}</td>
+	</tr>
+</table>
