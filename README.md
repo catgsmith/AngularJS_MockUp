@@ -2,7 +2,7 @@
 AngularJS_MockUp
 This is a sandbox project set up to tryout angular UI components. (see directory called different_versions_of_index_html)
 Just swop one of these for index.html to try out the sample code.
-In particular the angular-multi-step-form provided by: [https://github.com/troch/angular-multi-step-form/tree/master/dist](./dist):
+In particular the angular-multi-step-form provided by: https://github.com/troch/angular-multi-step-form
 
 
 ## Requirements
@@ -17,17 +17,20 @@ Make sure you have node installed;
 ```sh
 $ node --version
 ```
-	
-Install bower components (dependancies listed in bower.json) 
+If you haven't already done so you need to install the node dependencies by running:
+```sh
+$ npm install
+```	
+Install bower components (dependancies listed in bower.json) into the `public` directory.
    Note: bower components will be installed in folder lib (see AngularJS_MockUp/.bowerrc)
    
 ```sh
+$ cd public
 $ bower install
 ```
    
 ## To run application:
-open command prompt at the root of project and type;  
+To see the app running in a browser, open a separate terminal/command line tab or window, then run `node server.js` to start the web server. Now, open a browser window for the app and navigate to `http://localhost:3000`  
 ```sh
 $ node server.js
 ```	
-This will start the server listening on port 3000. Open your browser on http://localhost:3000/
